@@ -104,6 +104,7 @@ I'll add a lot more info about the code signing resources in the Mac OS X code s
 *  Frameworks are libraries that are specific to OS X
 *  They are closed source as opposed to Darwin libraries
 *  They also have a bundle format which is slightly different from the bundle format of applications discussed above  
+
 ##### Location
 * /System/Library/Frameworks: Apple supplied frameworks reside here
 * /Library/Frameworks: 3rd party frameworks reside here
