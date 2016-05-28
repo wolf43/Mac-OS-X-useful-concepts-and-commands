@@ -103,11 +103,12 @@ I'll add a lot more info about the code signing resources in the Mac OS X code s
 #### Frameworks
 *  Frameworks are libraries that are specific to OS X
 *  They are closed source as opposed to Darwin libraries
-*  They also have a bundle format which is slightly different from the bundle format of applications discussed above
+*  They also have a bundle format which is slightly different from the bundle format of applications discussed above  
 ##### Location
 * /System/Library/Frameworks: Apple supplied frameworks reside here
 * /Library/Frameworks: 3rd party frameworks reside here
-* ~/Library/Frameworks: User supplied frameworks reside here
+* ~/Library/Frameworks: User supplied frameworks reside here  
+
 ##### Cocoa
 This is the framework used to develop applications for OS X <https://en.wikipedia.org/wiki/Cocoa_(API)>  
 Apple is trying to get developers to use Swift<https://developer.apple.com/swift/> as the primary programming language but objective C is still very much supported. Cocoa API is also accesible through various other programming languages(wiki page linked above has more info)  
