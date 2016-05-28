@@ -1,7 +1,7 @@
 # MAC OSx and iOS internals useful concepts and commands
 ## Origin of content
 Most of this content is from the awesome textbook <http://www.amazon.com/Mac-OS-iOS-Internals-Apples/dp/1118057651/ref=sr_1_2?ie=UTF8&qid=1464466126&sr=8-2&keywords=mac+os+x+internals>  
-If you are serious about learning Mac OS X and iOS internal, get a copy of the book and read it. Thinks of this doc as a quick reminder doc of userful concepts and commands
+If you are serious about learning Mac OS X and iOS internal, get a copy of the book and read it. Think of this document as a quick reminder document of userful concepts and commands
 ###uname
 Get details of architecture and version history of Darwin  
 uname -a will give all the info
@@ -94,3 +94,33 @@ Conversion using plutil
 Info.plist entries  
 <https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html#//apple_ref/doc/uid/TP40009254-SW1>  
 PkgInfo = CFBundlePackageType + CFBundleSignature  
+
+##### Resources
+This directory contains all the resources the applicaiton needs. This can contain any type of file the application might need  
+I'll add a lot more info about the code signing resources in the Mac OS X code signing project  
+
+
+#### Frameworks
+*  Frameworks are libraries that are specific to OS X
+*  They are closed source as opposed to Darwin libraries
+*  They also have a bundle format which is slightly different from the bundle format of applications discussed above
+##### Location
+* /System/Library/Frameworks: Apple supplied frameworks reside here
+* /Library/Frameworks: 3rd party frameworks reside here
+* ~/Library/Frameworks: User supplied frameworks reside here
+##### Cocoa
+This is the framework used to develop applications for OS X <https://en.wikipedia.org/wiki/Cocoa_(API)>  
+Apple is trying to get developers to use Swift<https://developer.apple.com/swift/> as the primary programming language but objective C is still very much supported. Cocoa API is also accesible through various other programming languages(wiki page linked above has more info)  
+You can have some fun with speech to text framework <https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/SpeechSynthesisProgrammingGuide/SpeechOverview/SpeechOverview.html>  
+
+#### Libraries
+* These are the UNIX system libraries that all UNIX folks will be familiar with
+* They are stored in /usr/lib directory
+* On OS X, they have .dylib extension instead of .so extension
+* libc is is libSystem.B.dylib library Apple provides
+
+#### Widgets
+* These are basic web pages that can be presented by dashboard
+* They are written just like webpages with html, js and css
+* They reside as bundles with .wdgt format in /Library/Widgets directory
+
