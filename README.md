@@ -1,5 +1,7 @@
-# MAC OSx and iOS internals useful commands
-
+# MAC OSx and iOS internals useful concepts and commands
+## Origin of content
+Most of this content is from the awesome textbook <http://www.amazon.com/Mac-OS-iOS-Internals-Apples/dp/1118057651/ref=sr_1_2?ie=UTF8&qid=1464466126&sr=8-2&keywords=mac+os+x+internals>  
+If you are serious about learning Mac OS X and iOS internal, get a copy of the book and read it. Thinks of this doc as a quick reminder doc of userful concepts and commands
 ###uname
 Get details of architecture and version history of Darwin  
 uname -a will give all the info
@@ -67,41 +69,7 @@ ls -Oal will list hidden directories with attribute showing
 * /Volumes - Mount point for removable media and network file system
 * /Cores - Dir for core dumps. Core dumps are created when a process crashes
 
-Dump from my machine
-[redacted]-osx:/ wolf43$ ls -Oal
-total 51
-drwxr-xr-x   34 root  wheel  -                  1224 Jan 28 02:47 .
-drwxr-xr-x   34 root  wheel  -                  1224 Jan 28 02:47 ..
--rw-rw-r--    1 root  admin  -                     0 Sep 15  2015 .DS_Store
-d--x--x--x    9 root  wheel  -                   306 Apr 28 15:35 .DocumentRevisions-V100
-drwxr-xr-x    2 root  admin  -                    68 Jan  8  2015 .[redacted]
-drwx------    5 root  wheel  -                   170 Apr 11  2015 .Spotlight-V100
-d-wx-wx-wt    2 root  wheel  hidden               68 Jun  6  2015 .Trashes
-----------    1 root  admin  -                     0 Sep 15  2015 .file
-drwx------  480 root  wheel  -                 16320 May 23 13:12 .fseventsd
-drwxr-xr-x@   2 root  wheel  hidden               68 Jan 28 02:32 .vol
-drwxrwxr-x+  79 root  admin  sunlnk             2686 May 21 06:06 Applications
-drwxrwxr-x    4 root  admin  -                   136 Jan 28 02:47 Incompatible Software
-drwxr-xr-x+  71 root  wheel  sunlnk             2414 Mar 25 12:28 Library
-drwxr-xr-x@   2 root  wheel  hidden               68 Jan 28 02:32 Network
-drwxrwx---    3 root  Virex  -                   102 Nov  9  2015 Quarantine
-drwxr-xr-x@   4 root  wheel  restricted          136 Jan 28 02:26 System
-drwxr-xr-x    6 root  admin  -                   204 Jan 28 02:32 Users
-drwxrwxrwt@   3 root  admin  hidden              102 May 23 09:10 Volumes
-drwxr-xr-x@  39 root  wheel  restricted,hidden  1326 Jan 13 18:05 bin
-drwxrwxr-t@   2 root  admin  hidden               68 Jan 28 02:32 cores
-drwxr-xr-x    3 root  wheel  -                   102 Jan 17 21:55 data
-dr-xr-xr-x    3 root  wheel  hidden             7623 Apr 28 15:35 dev
-lrwxr-xr-x@   1 root  wheel  restricted,hidden    11 Jan 28 02:30 etc -> private/etc
-dr-xr-xr-x    2 root  wheel  hidden                1 Apr 28 15:35 home
--rw-r--r--@   1 root  wheel  hidden              313 Jul 31  2015 installer.failurerequests
-dr-xr-xr-x    2 root  wheel  hidden                1 Apr 28 15:35 net
-drwxr-xr-x@   6 root  wheel  hidden              204 Feb 21 09:04 opt
-drwxr-xr-x@   6 root  wheel  hidden              204 Jan 28 02:32 private
-drwxr-xr-x@  59 root  wheel  restricted,hidden  2006 Jan 28 02:31 sbin
-lrwxr-xr-x@   1 root  wheel  restricted,hidden    11 Jan 28 02:30 tmp -> private/tmp
-drwxr-xr-x@  11 root  wheel  restricted,hidden   374 Jan 28 02:36 usr
-lrwxr-xr-x@   1 root  wheel  restricted,hidden    11 Jan 28 02:31 var -> private/var  
+To get complete list, run "ls -Oal" from /   
 
 #### Bundles
 Standardized heirarchical structure that holds executable code and the resources used by that code  
@@ -126,5 +94,3 @@ Conversion using plutil
 Info.plist entries  
 <https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html#//apple_ref/doc/uid/TP40009254-SW1>  
 PkgInfo = CFBundlePackageType + CFBundleSignature  
-
- 
