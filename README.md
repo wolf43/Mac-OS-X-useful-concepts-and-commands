@@ -136,13 +136,16 @@ You can have some fun with speech to text framework <https://developer.apple.com
 * It performs process and thread abstarction
 * Manages virtual memory management
 * Task scheduling
-* Interprocess communication and messaging
-#### BSD layer
+* Interprocess communication and messaging  
+
+#### BSD system calls
 * It provides UNIX process model
 * POSIX threading model
 * UNIX users and groups
-* Network stack
+* Network stack  
+
 #### libkern
-It is a built in C++ library that allows kernel components to be written in C++(in addition to C and assembly like most kernels are created)
+It is a built in C++ library that allows kernel components to be written in C++(in addition to C and assembly like most kernels are created)  
+
 #### I/O kit
 It is a I/O device driver framework that runs in libkern(C++) enviornment
