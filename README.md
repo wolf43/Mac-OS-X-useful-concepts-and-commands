@@ -124,5 +124,25 @@ You can have some fun with speech to text framework <https://developer.apple.com
 #### Widgets
 * These are basic web pages that can be presented by dashboard
 * They are written just like webpages with html, js and css
-* They reside as bundles with .wdgt format in /Library/Widgets directory
+* They reside as bundles with .wdgt format in /Library/Widgets directory  
 
+#### BSD and Mach API
+* It is also possible to work directly with UNIX and Mach API for application development  
+* Starting with Leopard(10.5), OS X is a certified UNIX implementation compliant with portable operating system interface(POSIX)
+* Mach system calls are also avaiable in the user mode and are negative to keep them distanct from positive POSIX system calls
+
+### XNU components
+#### Mach microkernel
+* It performs process and thread abstarction
+* Manages virtual memory management
+* Task scheduling
+* Interprocess communication and messaging
+#### BSD layer
+* It provides UNIX process model
+* POSIX threading model
+* UNIX users and groups
+* Network stack
+#### libkern
+It is a built in C++ library that allows kernel components to be written in C++(in addition to C and assembly like most kernels are created)
+#### I/O kit
+It is a I/O device driver framework that runs in libkern(C++) enviornment
